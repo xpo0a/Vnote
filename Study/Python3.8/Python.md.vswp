@@ -477,6 +477,7 @@ vnote_backup_file_826537664 C:/Users/90619/Documents/vnote_notebooks/vnotebook/S
     d.clear()    删除所有键值对
     len(d) 返回字典中元素的个数
 ```
+    元组() 列表[] 字典、集合{}
     字典类型的应用场景
         元素遍历
             for k in d:
@@ -521,7 +522,7 @@ vnote_backup_file_826537664 C:/Users/90619/Documents/vnote_notebooks/vnotebook/S
         2.逗号分隔
         3.其他方式（特殊符号 分隔)
 ## 7.2 二维数据的格式化
-    二维列表
+    二维
     ls[row][colum]
 # 8.Python第三方库
     pypi.org #检索第三方库
@@ -655,6 +656,19 @@ print (f"Hi,{name}{DaZhaoHu}")#没有空格
 
 注释 # = """  """
 
+模块
+    get X form Y
+    from X import Y
+    1.一个包含函数和变量的Python文件
+    2.导入这个文件
+    3.用 . 来获取该模块中的函数或者变量
+    import mystuff
+    mystuff.apple()
+class
+    class Name(object):
+        def __init__(self):
+对象
+    实例化的class
 
 
 ```

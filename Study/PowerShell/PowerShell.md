@@ -1,0 +1,41 @@
+格式
+    命令 参数 #解释
+    
+```x
+cls
+cd
+dir,ls
+type,cat
+copy,cp
+md 创建文件
+calc #打开计算器
+notepad #打开记事本
+mspaint #打开 绘图工具
+ipconfig /all
+ipconfig #检查网络配置情况
+pwd #查看当前位置
+help 命令 #查看解释
+*表示代替字母
+
+```
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
