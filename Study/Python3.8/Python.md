@@ -1,3 +1,4 @@
+#  0.Python 目录(你得知道该去哪里找吧）
 # 1.基本语法
 ## 1.0数据类型
 ```x
@@ -66,6 +67,7 @@
         def add(x,y)
         result = x+y
         print(result)
+    __init__
 ```
 ##  1.7 input and print
     a=input("请输入一个数字")
@@ -463,6 +465,7 @@
 ```
 ## 6.4 字典类型
 ```x
+    {key1:value1, key2:value2, key3...}
     映射= 键(索引)-->数据
     d={键1:数据,键2:数据,键3:数据,键4:数据...}
     操作方法
@@ -588,9 +591,8 @@
     class Dog():
         "一次类的简单尝试"
 
-        def __init__(self, name,
-                     age):  #约定俗成的方法，在创建类的过程汇总就讲多个属性捆绑上去，self是不能改变的，可以不穿参数
-            #每个调用class的函数（方法），都传递实参shelf
+        def __init__(self, name,age):  #约定俗成的方法，在创建类的过程中，将某几个必需的参数捆绑上去，！self表示 创建的实例本身，不可修改
+            #每个调用class的函数（方法），都传递实参self
             self.name = name
             self.age = age
 
@@ -608,6 +610,8 @@
 ```
 ## 8.1 继承
 紧接上面Dog例子
+类、继承、多态、访问限制、对象
+注意哦 ‘类是不会下海干活的，干活的只有实例’
 ```x
     class hyena():
         def __init__(self,name,years)
@@ -668,11 +672,138 @@ class
         def __init__(self):
 对象
     实例化的class
+```
+# 2.0 python 学习之路
+```x
+
+参数
+    默认参数
+        默认参数需要指向不变值，常常课将其赋值为Null
+        def Name(x,y=Null)
+        调用 Name(1)
+            Name(1,2)
+    可变参数
+    *numbers '*'说明该参数是可变的，可以是空，可以是2个，可以是3个。。。
+        def calc(*numbers):
+            sum=0
+            for n in numbers:
+                sum+=n*n
+            return sum
+        num=[1,2,3,4]
+        print(calc(*num))
+    关键字参数 **k
+        区别于可变参数，要求传入0个或者任意个含参数名的参数，即字典
+        def person(name,age,**k) #name 与age为必选参数 **k为关键字参数
+        def person(Lee,14) 可
+        def person(Lee,14,city='BeiJing')可
+        def persong(Lee,14,city='',Nation='Han')
+    练习 
+    def product(s,*num):
+    for i in num:
+        s=s*i
+    return s #将任意输入的数乘起来
+```
+```x
+eg 1.
+递归调用，去掉字符串首尾的 空格
+    def trim(s):
+        if s=='':
+            return s
+        elif s[0]==' ':
+            return trim(s[1:])
+        elif s[-1]==' ':
+            return tirm(s[:-1])
+        else:
+            return s
+```
+```x
+索引高级用法
+eg 2.
+    for i,value in enumerate(['A', 'B', 'C'])
+        print(i,value)
+        0 A
+        1 B
+        2 C
+```
+```x
+eg 3.
+查找列表中最大、最小元素
+    def findMinAndMax(L):
+        if len(L) == 0:
+            Min = None
+            Max = None
+        else:
+            Max = L[0]
+            Min = L[0]
+            for i in range(len(L) - 1):
+                if Max < L[i + 1]:
+                    Max = L[i + 1]
+                elif Min > L[i + 1]:
+                    Min = L[i + 1]
+                else:
+                    pass #占位符 pass
+        return (Min,Max)
+        # 测试
+    if findMinAndMax([]) != (None, None):
+        print('测试失败!')
+    elif findMinAndMax([7]) != (7, 7):
+        print('测试失败!')
+    elif findMinAndMax([7, 1]) != (1, 7):
+        print('测试失败!')
+    elif findMinAndMax([7, 1, 3, 9, 5]) != (1, 9):
+        print('测试失败!')
+    else:
+        print('测试成功!')
+```
+```x
+列表生成器
+    list generator
+        生成[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        list(range(1,11)) #range(start,end) 始于start，终于end-1
+
+        生成[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+        [x*x for x in range(1,11)] #列表中还可以加 循环
+
+        生成[2, 4, 6, 8, 10, 12, 14, 16, 18]
+        [x for x in range(1,20) if x%2==0] #列表中还可以加 判断
+```
+```x
+生成器
+    L = [x * x for x in range(10)]
+    g = (x * x for x in range(10))
+    a, b = b, a + b  # 很厉害的赋值语句
+    Iterator 迭代器
+        for A in B 
+```
+```x
+函数高级用法
+    1.变量可以指向函数
+        x=abs
+    2.传入函数
+        函数A 可接受 函数B 作为参数
+        def add(x,y,f):
+            return f(x)+f(y)
+        f=abs
+        add(-100,99,f)
+    3.map/reduce
+        map (Function, 列表)
+                def f(x):
+            return x * x
+        r = map(f, [1, 2, 3, 4, 5, 6, 7, 8]) #将列表作为参数传入f中
+        reduce (f,[1,2,3,4,5,6])
+    4.filter 过滤函数
+    5.sorted 列表排序
+    6.返回函数 闭包
+    7.简单函数 用 lambda吧
+    8.装饰器 脑壳有点混沌。。
+    9.偏函数
+    
+        
+
+
 
 
 ```
-
-
 
 
 

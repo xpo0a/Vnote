@@ -18,6 +18,9 @@
         },
         {
             "name": "PowerShell"
+        },
+        {
+            "name": "Make"
         }
     ],
     "version": "1"
