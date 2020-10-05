@@ -7,6 +7,9 @@
     "recycle_bin_folder": "_v_recycle_bin",
     "sub_directories": [
         {
+            "name": "Study"
+        },
+        {
             "name": "C++"
         },
         {
@@ -14,9 +17,6 @@
         },
         {
             "name": "Git"
-        },
-        {
-            "name": "Study"
         }
     ],
     "tags": [
