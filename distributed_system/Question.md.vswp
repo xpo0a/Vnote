@@ -1,3 +1,4 @@
+vnote_backup_file_826537664 C:/Users/90619/Documents/vnote_notebooks/vnotebook/distributed_system/Question.md
 # 0.通信流程
 1.采集设备连接中央服务器，得到集群服务器的地址，小车断开与中央服务器连接，接着连接集群服务器
 2.集群服务器拿到数据传给计算工作站，工作站计算结果，传给集群服务器
@@ -20,5 +21,6 @@
 4.限位栏母猪-盘点（0,1）
 
 # 1.Boost 问题
+class talk_to_center : public boost::enable_shared_from_this<talk_to_center>, boost::noncopyable
 
 
