@@ -21,6 +21,12 @@
         },
         {
             "name": "Make"
+        },
+        {
+            "name": "Git"
+        },
+        {
+            "name": "C++"
         }
     ],
     "version": "1"

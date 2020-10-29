@@ -19,6 +19,9 @@
 3.群养栏育肥猪-盘点
 4.限位栏母猪-盘点（0,1）
 
-# 1.Boost 问题
+conda activate tensorflow
 
+# 1.Boost 问题
+[asio](https://zhuanlan.zhihu.com/p/39973955)
+简单教程
 

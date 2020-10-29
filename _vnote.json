@@ -13,13 +13,16 @@
             "name": "Study"
         },
         {
-            "name": "C++"
-        },
-        {
             "name": "distributed_system"
         },
         {
-            "name": "Git"
+            "name": "草稿本"
+        },
+        {
+            "name": "一技之长，技多不压身"
+        },
+        {
+            "name": "需求分析"
         }
     ],
     "tags": [
