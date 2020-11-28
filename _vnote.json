@@ -7,13 +7,16 @@
     "recycle_bin_folder": "_v_recycle_bin",
     "sub_directories": [
         {
+            "name": "深度学习"
+        },
+        {
             "name": "读书笔记"
         },
         {
-            "name": "Study"
+            "name": "distributed_system"
         },
         {
-            "name": "distributed_system"
+            "name": "Study"
         },
         {
             "name": "草稿本"
