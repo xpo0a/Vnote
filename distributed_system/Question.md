@@ -33,7 +33,12 @@ list index out fo range ：与cluster 连接失败
     2号工作站：pretreat weight
     启动流程-> 1号工作站：cluster -> inventory 03/ inventory 04/ fat 01 /pretreat ，2号工作站：pretreat weight，一号工作站：center
     向日葵 用户名：ubuntu 密码：xl123456
-huanging
+### 1号工作站
+    center
+    cluster
+    inventory 03,04 命令，conda activate tensorflow python main.py
+    pretreat 命令，conda activate tensorflow，./workstation
+    fat01 conda activate pytorch python main.py
 | 服务器名称    |   用户名  |   密码  |   备注  |
 | :-: | :-: | :-: | :-: |
 |  QA-No.1 | ubuntu    |  xl16   |     |
@@ -45,11 +50,16 @@ screen -r 设备号
 kill 进程名
 conda activate xxx
 QA-No.1 inventory /pretreat 均tensorflow(其余均pytorch)  fat
-QA-No.2 pretreat weight
+QA-No.2 pretreat（tensorflow） weight
 QA-No.3 测试用，对应 2号
 QA-No.4 测试用，对应1号
 1~4 均在公司
 pretreat启动,conda activate tensorflow  ./workstation
+### 2号工作站
+    screen 上层目录
+    查看，杀死进程 screen - kill + 进程名
+    运行 测重，
+
 
 日常维护任务：
 
@@ -63,7 +73,16 @@ pretreat启动,conda activate tensorflow  ./workstation
 图片没传全
 Computer
 
-
+#### 工作计划
+    1.log修改
+        md5+imgsize 等等
+    2.越界访问
+        哪个变量，数组，是动态的，动态变量没被释放(delete)
+    3.PNG格式改成JPG(imencode)
+        压缩率
+    4.main 定义的锁，删除无用的锁，拆开用冲突的锁，换重复的锁、共享锁、独占锁
+    5.cluster 中的重连功能
+    6.补充其他部分的 READ.ME
 
 
 
