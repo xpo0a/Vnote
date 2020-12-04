@@ -78,11 +78,28 @@ Computer
         md5+imgsize 等等
     2.越界访问
         哪个变量，数组，是动态的，动态变量没被释放(delete)
-    3.PNG格式改成JPG(imencode)
+    3.PNG格式改成JPG(imencode) (x)
         压缩率
-    4.main 定义的锁，删除无用的锁，拆开用冲突的锁，换重复的锁、共享锁、独占锁
+    4.main 定义的锁，删除无用的锁，拆开用冲突的锁，换重复的锁、共享锁、独占锁 (x)
     5.cluster 中的重连功能
     6.补充其他部分的 READ.ME
 
+### 发生的bug
+    2号工作站：
+        weight : list index out of range 列表无一个元素
+    1号工作站：
+    fat01问题： imgLength= int (lengthrecv.split('^_^'))崩掉了
+    cluster: terminate called after throwing an instance of 'std::bad_alloc' !!!!内存不够，new获取内存空间失败，内存没及时释放掉，new 完，没delete
+    vector clear
+    更新服务器过程中，发现了一个bug，cluster_to workstation to equipment new的动态变量没被delete
+    pretreat换了流程
 
+内存不足，
+    更新服务器过程中，发现了一个bug，cluster_to workstation to equipment new的动态变量没被delete
+1.分布式日常维护
+2.完善log、盘点图片格式修改为JPG、完善mutex、BUG(bad_alloc)
+3.复习 统计学习方法
 
+1.分布式日常维护
+2.代码中添加README.md，学习代码测试
+3.学习《Effective C++》第三章、AdaBoost
