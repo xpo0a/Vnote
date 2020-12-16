@@ -103,3 +103,7 @@ Computer
 1.分布式日常维护
 2.代码中添加README.md，学习代码测试
 3.学习《Effective C++》第三章、AdaBoost
+
+系统分区：
+500M efi
+剩下 /
