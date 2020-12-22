@@ -104,6 +104,11 @@ Computer
 2.代码中添加README.md，学习代码测试
 3.学习《Effective C++》第三章、AdaBoost
 
+https://heu505.quickconnect.cn
+https://heu505.cn2.quickconnect.cn
+
+
+
 系统分区：
 500M efi
 剩下 /

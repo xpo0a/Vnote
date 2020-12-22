@@ -71,12 +71,15 @@
     
     查全率=TP/ (TP + FN) 真正判对的/所有对的
 
+模型设计，模型结构，还有训练方法
+### 反向传播算法
+[参考1](https://zhuanlan.zhihu.com/p/79657669)
+[实例计算](https://www.cnblogs.com/charlotte77/p/5629865.html)
 
 
 
 
-
-
+![](_v_images/20201222101033709_17744.png =604x)
 
 
 

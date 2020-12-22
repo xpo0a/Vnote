@@ -1,0 +1,20 @@
+vnote_backup_file_826537664 C:/Users/90619/Documents/vnote_notebooks/vnotebook/distributed_system/Ubuntu配置.md
+### 1.初步配置系统
+    1.换源
+    更新软件列表、升级
+        sudo apt-get update
+        sudo apt-get upgrade
+    禁用内核自动更新
+        sudo apt-mark hold linux-image-generic linux-headers-generic
+    2.安装 常用软件
+        google、输入法、
+        sudo add-apt-repository ppa:a-v-shkop/chromium
+        sudo apt-get update
+        sudo apt-get install chromium-browser
+        apt-get insatall -f 修复安装依赖
+    3.共享文件夹
+        Vmware ，启动虚拟机，安装Vware Tools
+    4.安装 Python运行库
+        安装 anaconda
+
+### 2.
