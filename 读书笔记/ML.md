@@ -40,21 +40,9 @@
 ### AdaBoost
 ![扫描 2020年12月9日 下午8](_v_images/20201209205640223_21584.jpg =937x)
 ![扫描 2020年12月9日 下午8](_v_images/20201209205725039_23202.jpg =1073x)
-### 卷积神经网络 CNN
-    [参考文档1](https://www.cnblogs.com/wj-1314/p/9593364.html)
-    [参考文档2](https://www.jianshu.com/p/1ea2949c0056)
-    （请打开文档，按照思路走）
-    特征提取，哪些特征是有用的，哪些特征是重要的？
-    输入层：预处理 取均值 归一化 PCA/SVD
-    卷积层：
-### 全连接层、卷积层、池化层
-    不懂么？
-[看看这个block吧](https://blog.csdn.net/m0_37407756/article/details/80904580)
 
-### 神经网络
-[神经网络是啥呀](https://www.cnblogs.com/maybe2030/p/5597716.html)
-[后向传播算法是干嘛的](https://www.cnblogs.com/charlotte77/p/5629865.html)
-回答我：后向误差是啥啊，咋传播的，有啥影响啊
+    回答我：后向误差是啥啊，咋传播的，有啥影响啊
+    Relu通，反向导数通，比较有难度的是对矩阵求偏导运算，改变w，b的值
     神经网络，能找到良好的心理表征吗？（理性认识+感性认识）
 ### 模型评估参数
 #### 0.查准率（precesion） 查全率（recall）
@@ -70,15 +58,40 @@
     查准率=TP/（TP + FP） 真正判对的/判对的  （对的判错不管）
     
     查全率=TP/ (TP + FN) 真正判对的/所有对的
+### 神经网络
+[神经网络是啥呀](https://www.cnblogs.com/maybe2030/p/5597716.html)
+[后向传播算法是干嘛的](https://www.cnblogs.com/charlotte77/p/5629865.html)
+
+### 卷积神经网络 CNN
+[参考文档1](https://www.cnblogs.com/wj-1314/p/9593364.html)
+[参考文档2](https://www.jianshu.com/p/1ea2949c0056)
+    
+    （请打开文档，按照思路走）
+    特征提取，哪些特征是有用的，哪些特征是重要的？
+    输入层：预处理 取均值 归一化 PCA/SVD
+    结构：
+        Input layer:
+        Conv layer:
+        ReLU layer:激活函数（分段）sigmoid TanH ReLU
+        Polling layer:
+        Full Connected layer: FC 全连接，ReLU前的最后一层Conv layer，！！！将各个representation整合成一个值，想想Taylor公式吧，用多项式函数去近似拟合光滑函数
+### 全连接层、卷积层、池化层
+    不懂么？
+[看看这个block吧](https://blog.csdn.net/m0_37407756/article/details/80904580)
+
+    全连接层：将局部特征（feature map）全连接起来
+    卷积层（Filter）：提取局部特征，输入FeatureMap to 输出FeatureMap
+    池化层：缩小输入FeatureMap规模，通道数不变，取min max average（算数平均Mean 中位数Median 众数Mode）...
 
 模型设计，模型结构，还有训练方法
 ### 反向传播算法
 [参考1](https://zhuanlan.zhihu.com/p/79657669)
 [实例计算](https://www.cnblogs.com/charlotte77/p/5629865.html)
+[反向传播-计算图](https://blog.csdn.net/wzw12315/article/details/80856698)
 
-
-
-
+    计算图：直观展示计算过程
+    节点（局部计算）->图（全局计算）
+    正向传播 ReLu 反向传播 求导
 ![](_v_images/20201222101033709_17744.png =604x)
 
 
